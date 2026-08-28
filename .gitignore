@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production build artifacts
+dist/
+build/
+backend/dist/
+frontend/dist/
+
+# Compiled Fortran / C binary modules
+*.mod
+*.o
+*.obj
+*.exe
+*.dll
+
+# Temporary uploads and cache
+tmp/uploads/*
+!tmp/uploads/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local archives and environment
+*.zip
+.env
+.env.local
+
+# Database files (optional: keep schema, ignore runtime sqlite db)
+*.sqlite-journal
+*.db-wal
+*.db-shm
+
+# OS generated files
+.DS_Store
+Thumbs.db

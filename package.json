@@ -1,0 +1,26 @@
+{
+  "name": "ghostcode",
+  "version": "1.0.0",
+  "description": "PROJECT GHOSTCODE — The Code Autopsy Lab",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start": "node scripts/start-all.js",
+    "dev": "node scripts/start-all.js",
+    "start:backend": "node backend/dist/backend/src/server.js",
+    "start:frontend": "npm --prefix frontend run dev",
+    "audit:loc": "node scripts/audit-loc.js",
+    "build:cobol": "node scripts/build-cobol-engine.js",
+    "build:fortran": "node scripts/build-fortran-engine.js",
+    "build:typescript": "node scripts/build-typescript-engine.js",
+    "build:engines": "node scripts/build-engines.js",
+    "seed": "node scripts/seed-demo-projects.js",
+    "test": "node scripts/run-all-tests.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
