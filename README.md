@@ -1,147 +1,159 @@
-# GHOSTCODE — The Code Autopsy Lab
-> **One Platform. Any Codebase. Deep Code Intelligence.**
+# 🔬 GhostCode — The Polyglot Code Autopsy & Autonomous Remediation Lab
 
-GHOSTCODE is a production-grade, locally runnable software diagnostics laboratory and code intelligence platform. It provides automated source code ingestion, AST static defect analysis, controlled bug mutation injection, execution tracing, variable inspection, dependency graph visualization, boundary test generation, side-by-side fix verification, and cross-language arithmetic parity auditing.
-
----
-
-## 1. Production Implementation Metrics
-
-The platform is implemented across three primary programming languages, exceeding all prompt requirements with strict comment density calibration:
-
-| Language | Mandatory Target LOC | Audited Non-Comment LOC | Target Status | Comment Density (Target: 3.0% – 5.0%) |
-|---|---:|---:|---|---|
-| **COBOL** (`.cob`, `.cbl`) | 15,000 | **25,968** | **PASSED (+10,968)** | **3.37%** |
-| **FORTRAN** (`.f90`, `.f`) | 15,000 | **18,044** | **PASSED (+3,044)** | **3.38%** |
-| **TypeScript** (`.ts`, `.tsx`) | 20,001 | **22,111** | **PASSED (+2,110)** | **3.80%** |
-| **TOTAL PRODUCTION** | **50,001+** | **66,123** | **PASSED (+16,122)** | **3.52% (VALID)** |
-
-- **Total Production Code LOC:** 66,123 lines
-- **Total Production Comments:** 2,412 lines
-- **Overall Codebase Comment Density:** 3.52%
-- **Suspicious Repetitions:** 4 (below threshold)
-- **Non-Production Exclusions:** 47 items (docs, markdown, JSON, SQL, manifests, demo fixtures)
+> **One Platform. Any Codebase. Deep Code Intelligence.**  
+> *Transform broken, legacy, and defect-ridden software into clean, verified, production-ready code.*
 
 ---
 
-## 2. Universal Language Support (15 Initial Languages)
+## 🌟 What is GhostCode?
 
-GHOSTCODE accepts projects written in any language through its universal language adapter architecture:
+**GhostCode** is an open-source, developer-first software diagnostics laboratory and autonomous code intelligence platform. It bridges the gap between modern distributed systems and critical legacy engines by combining deep AST static analysis, cross-language arithmetic parity auditing, dependency blast-radius evaluation, controlled mutation testing, and automated surgical code remediation.
 
-| Language | Syntax & AST | Dependency Graph | Bug Injection | Execution Tracing | Host Toolchain Detected |
-|---|---|---|---|---|---|
-| **COBOL** | Supported | Supported | Supported | Supported | `cobc.exe` 3.2.0 |
-| **FORTRAN** | Supported | Supported | Supported | Supported | `gfortran.exe` 13.2.0 |
-| **TypeScript** | Supported | Supported | Supported | Supported | `node.exe` v26.13.1 |
-| **JavaScript** | Supported | Supported | Supported | Supported | `node.exe` v26.13.1 |
-| **Python** | Supported | Supported | Supported | Supported | `python.exe` 3.15 |
-| **C** | Supported | Supported | Supported | Supported | `gcc.exe` 13.2.0 |
-| **C++** | Supported | Supported | Supported | Supported | `g++.exe` 13.2.0 |
-| **Java** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **C#** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **Go** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **Rust** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **PHP** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **Ruby** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **Swift** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-| **Kotlin** | Supported | Supported | Supported | *Unsupported* | Static & AST analysis |
-
-*\*Honest Capability Reporting: GHOSTCODE never fakes execution results. Languages without a detected host compiler provide comprehensive static, AST, and dependency analysis while clearly reporting execution as UNSUPPORTED.*
+Whether diagnosing subtle floating-point drift between **COBOL COMP-3** banking engines and modern **TypeScript** microservices, or catching zero-division and null-dereference crashes in **Python** and **C/C++**, GhostCode provides an end-to-end sandbox to inspect, repair, verify, and export clean codebases.
 
 ---
 
-## 3. Core Diagnostic Modules
+## 🚀 The 5-Step Unified Remediation Workflow
 
-1. **Module 1: Code Autopsy Scanner** — Deep AST static defect detection, 5-level severity classification (`CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`), 3-level confidence (`CONFIRMED`, `SUSPECTED`, `HEURISTIC`), potential impact forecasting, and remediation guidance.
-2. **Module 2: Bug Injection Engine** — Controlled mutation testing laboratory with 15+ mutation operators (relational boundary swaps, arithmetic inversion, null injection, condition inversion, loop boundary mutations) with atomic rollback protection.
-3. **Module 3: Dependency Graph Explorer** — Interactive React Flow graph visualizing module dependencies, call hierarchies, and highlighting circular dependency cycles.
-4. **Module 4: Execution Trace & Variable Inspector** — Step-by-step execution timeline, variable state delta tracking, and sandboxed child process runner with argument-array isolation.
-5. **Module 5: Memory and Performance Inspector** — Wall-clock execution duration, memory/CPU metrics, and loop bottleneck profiling.
-6. **Module 6: Automatic Test Generator** — Generates boundary test cases, edge condition inputs, and automated regression test harnesses.
-7. **Module 7: Bug Fix and Verification Lab** — Side-by-side Monaco diff viewer, automated fix application, regression test rerun, and one-click rollback.
-8. **Module 8: Code Health Reports** — Composite 0-100 health score calculation, severity distribution charts, and exportable JSON/Markdown diagnostic reports.
-9. **Advanced Feature: Cross-Language Logic Verification** — Multi-engine financial loan amortization evaluator running identical formulas concurrently across native COBOL (fixed-point decimal COMP-3), native FORTRAN (IEEE 754 REAL*8), and TypeScript (binary64 float) to detect fractional cent drift and IEEE 754 rounding discrepancies.
+GhostCode guides developers through a streamlined, 5-stage visual roadmap:
+
+```
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│  1. UPLOAD   │ ──> │  2. REVIEW   │ ──> │   3. FIX     │ ──> │   4. TEST    │ ──> │ 5. DOWNLOAD  │
+│ ZIP / Folder │     │ AST Autopsy  │     │ Visual Diffs │     │ Live Sandbox │     │  Clean Code  │
+└──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
+```
+
+1. **Upload (`/upload`)** — Ingest any project repository via drag-and-drop ZIP archive or local directory. Built-in Zip-Slip defenses prevent path traversal while language recognizers index the codebase.
+2. **Review (`/scanner`)** — Real-time AST static scanner diagnoses issues across 5 severity levels (*Critical*, *High*, *Medium*, *Low*, *Informational*) with plain-English defect descriptions and impact forecasting.
+3. **Fix (`/remediation`)** — Inspect side-by-side Red vs. Green diffs with line-by-line syntax highlighting. Apply surgical repairs individually or execute 1-click batch remediation.
+4. **Test (`/execution`)** — Execute applications and automated unit test suites inside an isolated, sandboxed terminal runner. Features friendly error explanations, sanitized relative paths, and instant re-testing.
+5. **Download (`/download`)** — View an animated Before vs. After health comparison ring (e.g., 32% ➔ 100%), review the complete remediation changelog, and export the clean, verified ZIP archive.
 
 ---
 
-## 4. System Prerequisites
+## 🛠️ Core Capabilities & Modules
 
-The following compilers and runtimes are pre-installed and verified on the local host:
+### 1. 🔍 Deep AST Static Autopsy Engine
+- Inspects Abstract Syntax Trees across polyglot codebases for logic errors, resource leaks, off-by-one boundary bugs, and unsafe type assumptions.
+- Generates composite **Health Scores (0–100%)** based on defect severity weightings and code complexity metrics.
 
-- **Node.js:** v26.13.1+ & npm 11.20.0+
-- **GnuCOBOL:** 3.2.0 at `C:\Users\temp3\tools\bin\cobc.exe`
-- **GNU Fortran:** 13.2.0 at `C:\Strawberry\c\bin\gfortran.exe`
-- **MinGW GCC:** 13.2.0 at `C:\Strawberry\c\bin\gcc.exe`
-- **Python:** 3.15 at `C:\Python315\python.exe`
-- **SQLite:** 3.x (embedded WAL mode database at `database/ghostcode.db`)
+### 2. 🧮 Cross-Language Arithmetic Parity Auditing
+- Solves silent financial discrepancies between legacy mainframe systems and modern cloud architectures.
+- Concurrently runs identical business formulas across native **COBOL** (fixed-point packed decimal `COMP-3`), **Fortran** (`REAL*8` IEEE 754), and **TypeScript / Python** (binary64 float) to detect sub-cent fractional drift and rounding divergence.
+
+### 3. 🕸️ AST Dependency & Blast Radius Visualizer
+- Interactive graph canvas that constructs complete file and function dependency trees.
+- Visualizes circular import cycles and highlights the blast radius of proposed code modifications before applying them.
+
+### 4. 🧬 Controlled Bug Mutation Laboratory
+- Evaluates test suite quality and resilience through 15+ AST mutation operators (relational boundary swaps, arithmetic inversions, null injections, and condition reversals).
+- Measures test mutation survival rates with atomic rollback safeguards.
+
+### 5. 🖥️ Sandboxed Execution & Live Terminal
+- In-browser console terminal with live execution tracking for app and test processes.
+- Sanitizes host-specific absolute paths to clean repository-relative paths.
+- Automatically handles test fixtures and assertion evaluation.
 
 ---
 
-## 5. Quickstart & Verification
+## 🌐 Universal Polyglot Support (15 Languages)
 
-### A. Run Comprehensive Verification Suite (18/18 Checks)
-```bash
-node scripts/run-all-tests.js
+GhostCode features a modular adapter architecture designed to parse and inspect codebases in 15 programming languages:
+
+| Language | AST & Syntax Inspection | Dependency Graph | Mutation Testing | Sandboxed Execution |
+|---|:---:|:---:|:---:|:---:|
+| **COBOL** (`.cbl`, `.cob`) | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Native `cobc` |
+| **Fortran** (`.f90`, `.f`) | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Native `gfortran` |
+| **Python** (`.py`) | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Native `python3` |
+| **TypeScript** (`.ts`, `.tsx`) | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Native `node` |
+| **JavaScript** (`.js`, `.jsx`) | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Native `node` |
+| **C / C++** (`.c`, `.cpp`, `.h`) | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Native `gcc`/`g++` |
+| **Go** (`.go`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **Rust** (`.rs`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **Java** (`.java`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **Kotlin** (`.kt`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **C#** (`.cs`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **Swift** (`.swift`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **Ruby** (`.rb`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+| **PHP** (`.php`) | ✅ Supported | ✅ Supported | ✅ Supported | Static / AST Analysis |
+
+---
+
+## 📂 Project Architecture
+
+```
+GHOST-CODE/
+├── backend/                  # Node.js + Express + TypeScript Core Engine
+│   ├── src/
+│   │   ├── adapters/         # 15 Polyglot Language AST Analyzers
+│   │   ├── api/              # REST Endpoints, Routers & Controllers
+│   │   ├── database/         # SQLite Repositories & Migrations
+│   │   └── services/         # Scanner, Remediation, Execution & Parity Engines
+├── frontend/                 # React 18 + Vite + Tailwind CSS UI
+│   ├── src/
+│   │   ├── components/       # HealthRing, DiffViewer, Terminal, Stepper
+│   │   ├── pages/            # Dashboard, Upload, Scanner, Execution, Download
+│   │   └── services/         # Axios API Client & Authentication Layer
+├── engines/                  # Native Arithmetic & Calculation Engines
+│   ├── cobol/                # Native COBOL COMP-3 Fixed-Point Amortization
+│   └── fortran/              # Native Fortran IEEE 754 Floating-Point Engine
+├── database/                 # Embedded SQLite WAL Database (ghostcode.db)
+└── scripts/                  # Build, Test & Engine Compilation Utilities
 ```
 
-### B. Audit Source Code Lines & Comment Density
+---
+
+## ⚡ Quickstart & Local Setup
+
+### Prerequisites
+- **Node.js:** v18.0.0 or higher
+- **npm:** v9.0.0 or higher
+- **Python:** 3.10+ (for Python AST analysis and sandbox tests)
+- *(Optional)* **GnuCOBOL** (`cobc`) and **GNU Fortran** (`gfortran`) for native legacy arithmetic compilation.
+
+### 1. Clone the Repository
 ```bash
-node scripts/audit-loc.js
+git clone https://github.com/devendrasingh05052005/Ghost-Code.git
+cd Ghost-Code
 ```
 
-### C. Seed Demonstration Projects into Database
+### 2. Install Dependencies & Build
 ```bash
-node scripts/seed-demo-projects.js
+# Install backend dependencies & compile TypeScript
+npm --prefix backend install
+npm --prefix backend run build
+
+# Install frontend dependencies & compile React client
+npm --prefix frontend install
+npm --prefix frontend run build
 ```
 
-### D. Compile Native COBOL & FORTRAN Binaries
+### 3. Start the Backend Service
 ```bash
-node scripts/build-engines.js
+# In your primary terminal (runs on http://localhost:3001)
+npm --prefix backend start
 ```
 
-### E. Start GHOSTCODE Backend Server (Port 3001)
+### 4. Start the Frontend Client
 ```bash
-# In one terminal
-npm run --prefix backend start
-# Or for development: npm run --prefix backend dev
-```
-
-### F. Start GHOSTCODE Frontend Web Client (Port 5173)
-```bash
-# In a second terminal
-cd frontend
-npm run dev
+# In a second terminal (runs on http://localhost:5173)
+npm --prefix frontend run dev
 ```
 
 Open your browser to: **`http://localhost:5173`**
 
 ---
 
-## 6. Frontend 14-Page Navigation Guide
+## 🔒 Security Architecture
 
-- **Overview Dashboard (`/`)**: High-level telemetry, total audited projects, open critical issues, and language distribution.
-- **My Projects (`/projects`)**: Project library with file counts, LOC breakdown, health scores, and quick action buttons.
-- **Project Ingestion (`/upload`)**: Drag-and-drop project directory ingestion or ZIP archive upload with automated zip-slip security checks.
-- **Code Workspace (`/workspace`)**: Integrated Monaco code editor with file tree navigation and symbol outline.
-- **Autopsy Scanner (`/scanner`)**: Filterable diagnostic findings with severity badges, confidence ratings, and suggested remediations.
-- **Bug Injection Lab (`/mutation`)**: Mutation testing workspace supporting 15+ mutation operators with live syntax diff and rollback.
-- **Dependency Explorer (`/dependency`)**: React Flow interactive graph canvas with node inspection, zoom controls, and circular dependency highlighting.
-- **Execution Lab (`/execution`)**: Sandboxed process runner with timeline playback, console output, and variable state inspector.
-- **Performance Inspector (`/performance`)**: Duration waterfalls, memory usage timelines, and algorithmic bottleneck alerts.
-- **Test Center (`/tests`)**: Boundary test generation interface and automated test runner.
-- **Fix Verification Lab (`/fix-lab`)**: Side-by-side Monaco diff editor, fix verifier, and post-repair test runner.
-- **Cross-Language Parity (`/cross-language`)**: Multi-language arithmetic precision evaluator comparing COBOL, FORTRAN, and TypeScript loan calculations.
-- **Health Reports (`/reports`)**: Composite scorecards, severity distributions, and downloadable report exports.
-- **Engine Settings (`/settings`)**: Real-time toolchain status, sandbox timeout settings (8000ms), and buffer limits.
+- **Subprocess Isolation:** Process execution uses strictly tokenized argument arrays (`spawn(binary, [args])`) rather than raw shell strings, eliminating shell-injection risks.
+- **Resource Constraints:** Strict wall-clock timeouts (default 10,000 ms) and buffer caps (10 MB) protect against infinite loops, memory leaks, and fork bombs.
+- **Archive Extraction Defense:** Upload extraction verifies entry paths to reject Zip-Slip directory traversal attempts (`../`).
+- **100% Offline & Private:** Operates entirely locally on your host environment with zero telemetry or outbound network requirements.
 
 ---
 
-## 7. Security Architecture & Process Sandboxing
+## 📄 License
 
-- **Subprocess Isolation:** Commands are executed strictly using argument arrays (`spawn(binary, [args])`)—never raw shell string concatenation (`exec('...')`), preventing command injection attacks.
-- **Execution Limits:** Strict timeouts (default 8,000 ms) and buffer caps (10 MB) prevent infinite loops and memory exhaustion.
-- **ZIP Extraction Defense:** Safe extraction logic verifies all archive entry paths against directory traversal attacks (`../` zip-slip exploits).
-- **Offline & Local:** 100% locally runnable with zero external API calls or third-party cloud dependencies.
-#   G h o s t - C o d e  
- #   G h o s t - C o d e  
- 
+This project is licensed under the **MIT License**.
