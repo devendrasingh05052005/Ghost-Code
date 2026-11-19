@@ -80,6 +80,9 @@ export const ExecutionPage: React.FC<ExecutionPageProps> = ({ selectedProject, o
 
         const combinedOutput = d.stdout || d.stderr || d.output || '';
         setOutput(sanitizeTraceback(combinedOutput));
+        if (d.command) {
+          setTerminalTitle(d.command);
+        }
 
         if (!isOk) {
           const errText = d.stderr || d.output || '';
@@ -93,6 +96,8 @@ export const ExecutionPage: React.FC<ExecutionPageProps> = ({ selectedProject, o
             setFriendlyError(
               'Your app crashed with ZeroDivisionError: calculation tried to divide by zero when cart/list was empty.'
             );
+          } else if (errText.includes('No such file') || errText.includes("can't open file")) {
+            setFriendlyError('Test runner file was missing. An automated test suite has been prepared; click "Run tests" to re-verify.');
           } else if (errText.includes('AssertionError') || mode === 'test') {
             setFriendlyError('Automated test suite failed: assertions did not match expected mathematical output.');
           } else {
