@@ -1,0 +1,64 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CORE-BANKING-DEMO.
+       AUTHOR. GHOSTCODE-DEMO.
+      *> =========================================================
+      *> GHOSTCODE Demonstration Project: Commercial Banking Ledger
+      *> Contains intentional static defect candidates for autopsy:
+      *> - Potential division by zero in average transaction calc
+      *> - Unused working storage variable WS-UNUSED-AUDIT-FLAG
+      *> =========================================================
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-TRANSACTION-DATA.
+          05 WS-ACCOUNT-NUMBER       PIC 9(10) VALUE 1002345678.
+          05 WS-ACCOUNT-HOLDER       PIC X(30) VALUE 'ACME CORP HOLDINGS'.
+          05 WS-ACCOUNT-BALANCE      PIC S9(9)V99 VALUE 1500000.50.
+          05 WS-TOTAL-CREDITS        PIC S9(9)V99 VALUE 0.00.
+          05 WS-TOTAL-DEBITS         PIC S9(9)V99 VALUE 0.00.
+          05 WS-TRANSACTION-COUNT    PIC 9(5) VALUE 0.
+          05 WS-AVERAGE-AMOUNT       PIC S9(9)V99 VALUE 0.00.
+          05 WS-INTEREST-RATE        PIC 9V9999 VALUE 0.0475.
+          05 WS-ACCRUED-INTEREST     PIC S9(9)V99 VALUE 0.00.
+          05 WS-UNUSED-AUDIT-FLAG    PIC X(1) VALUE 'N'.
+          05 WS-STATUS-CODE          PIC 9(4) VALUE 0.
+
+       PROCEDURE DIVISION.
+       0000-MAIN-LOGIC.
+           DISPLAY "=== GHOSTCODE COBOL BANKING DEMO STARTED ==="
+           PERFORM 1000-PROCESS-CREDITS
+           PERFORM 2000-PROCESS-DEBITS
+           PERFORM 3000-CALCULATE-INTEREST
+           PERFORM 4000-COMPUTE-AVERAGE
+           PERFORM 5000-DISPLAY-SUMMARY
+           STOP RUN.
+
+       1000-PROCESS-CREDITS.
+           ADD 25000.00 TO WS-ACCOUNT-BALANCE
+           SUBTRACT 25000.00 TO WS-TOTAL-CREDITS
+           ADD 1 TO WS-TRANSACTION-COUNT.
+
+       2000-PROCESS-DEBITS.
+           SUBTRACT 12500.00 FROM WS-ACCOUNT-BALANCE
+           ADD 12500.00 TO WS-TOTAL-DEBITS
+           ADD 1 TO WS-TRANSACTION-COUNT.
+
+       3000-CALCULATE-INTEREST.
+           COMPUTE WS-ACCRUED-INTEREST ROUNDED = 
+               WS-ACCOUNT-BALANCE * WS-INTEREST-RATE / 12
+           ADD WS-ACCRUED-INTEREST TO WS-ACCOUNT-BALANCE.
+
+       4000-COMPUTE-AVERAGE.
+      *> Defect: If WS-TRANSACTION-COUNT were 0, division by zero occurs
+           IF WS-TRANSACTION-COUNT > 0
+               COMPUTE WS-AVERAGE-AMOUNT = 
+                   (WS-TOTAL-CREDITS + WS-TOTAL-DEBITS) / WS-TRANSACTION-COUNT
+           ELSE
+               MOVE 0 TO WS-AVERAGE-AMOUNT
+           END-IF.
+
+       5000-DISPLAY-SUMMARY.
+           DISPLAY "ACCOUNT: " WS-ACCOUNT-NUMBER
+           DISPLAY "BALANCE: " WS-ACCOUNT-BALANCE
+           DISPLAY "INTEREST:" WS-ACCRUED-INTEREST
+           DISPLAY "AVERAGE: " WS-AVERAGE-AMOUNT
+           DISPLAY "=== GHOSTCODE COBOL BANKING DEMO COMPLETED ===".

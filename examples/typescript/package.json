@@ -1,0 +1,10 @@
+{
+  "name": "ghostcode-typescript-demo",
+  "version": "1.0.0",
+  "description": "GHOSTCODE TypeScript Microservices Demonstration Project",
+  "main": "demo_service_01.ts",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {}
+}

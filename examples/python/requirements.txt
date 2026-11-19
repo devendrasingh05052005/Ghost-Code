@@ -1,0 +1,3 @@
+# GHOSTCODE Python Demo Dependencies
+# Standard scientific computation dependencies
+pytest>=7.0.0
